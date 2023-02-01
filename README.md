@@ -28,6 +28,8 @@ It is important to note that the default configuration is strict and disables se
 - Third-party cookies
 - Built-in password manager and auto-fill functionality
 
+You can also add `--enable-features=msDiagnosticDataForceOff` to `$XDG_CONFIG_HOME/microsoft-edge-stable-flags.conf` to further restrict the data sent to Microsoft.
+
 ## Contributing
 
 This configuration is currently only for Linux operating systems. Contributions are welcome to support MacOS and Windows as well. If you would like to contribute, please submit a pull request with your changes.
