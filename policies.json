@@ -1,0 +1,267 @@
+{
+  // https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#passwordmanagerenabled
+  // Enable Microsoft Edge to save user passwords.
+  // If you enable this policy, users can save their passwords in Microsoft Edge. The next time they visit the site, Microsoft Edge will enter the password automatically.
+  // If you disable this policy, users can't save new passwords, but they can still use previously saved passwords.
+  // If you enable or disable this policy, users can't change or override it in Microsoft Edge. If you don't configure it, users can save passwords, as well as turn this feature off.
+
+  // New tab page
+  // "HomepageIsNewTabPage": true,
+  "NewTabPageQuickLinksEnabled": false,
+  "NewTabPageAllowedBackgroundTypes": 3,
+  "NewTabPageContentEnabled": false,
+  "NewTabPageHideDefaultTopSites": true,
+  "NewTabPageLocation": "edge://newtab",
+
+  // Search
+  // "VisualSearchEnabled": false
+  "SearchFiltersEnabled": true,
+  "SearchInSidebarEnabled": 2,
+  "SearchSuggestEnabled": false,
+  "ForceBingSafeSearch": 0,
+  "ForceYouTubeRestrict": 0,
+  "ForceGoogleSafeSearch": false,
+  "QuickSearchShowMiniMenu": false,
+  "DefaultSearchProviderEnabled": true,
+  "DefaultSearchProviderContextMenuAccessAllowed": true, // changes both search with default search engine
+  "AddressBarMicrosoftSearchInBingProviderEnabled": false,
+  "DefaultSearchProviderKeyword": "Google",
+  "DefaultSearchProviderSearchURL": "https://www.google.com/search?q={searchTerms}&hl=en&gl=gb&num=25",
+  "DefaultSearchProviderSuggestURL": "https://google.com/complete/search?output=chrome&q={searchTerms}",
+  "DefaultSearchProviderImageURL": "https://www.google.com/searchbyimage/upload",
+  "DefaultSearchProviderImageURLPostParams": "encoded_image={google:imageThumbnail},image_url={google:imageURL},sbisrc={google:imageSearchSource},original_width={google:imageOriginalWidth},original_height={google:imageOriginalHeight",
+
+  "ManagedSearchEngines": [
+    {
+      "allow_search_engine_discovery": true
+    },
+    {
+      "is_default": true,
+      "keyword": "g",
+      "name": "Google",
+      "search_url": "https://www.google.com/search?q={searchTerms}&hl=en&gl=gb&num=25",
+      "suggest_url": "https://google.com/complete/search?output=chrome&q={searchTerms}",
+      "encoding": "UTF-8",
+      "image_search_url": "https://www.google.com/search?tbm=isch&q={searchTerms}"
+    },
+    {
+      "keyword": "bing",
+      "name": "Bing",
+      "search_url": "https://www.bing.com/search?q={searchTerms}",
+      "suggest_url": "https://www.bing.com/osjson.aspx?query={searchTerms}",
+      "encoding": "UTF-8",
+      "image_search_url": "https://www.bing.com/images/search?q={searchTerms}"
+    },
+    {
+      "keyword": "d",
+      "name": "DuckDuckGo",
+      "search_url": "https://duckduckgo.com/?q={searchTerms}",
+      "suggest_url": "https://ac.duckduckgo.com/ac/?q={searchTerms}&type=list",
+      "encoding": "UTF-8",
+      "image_search_url": "https://duckduckgo.com/?q={searchTerms}&iax=images&ia=images"
+    },
+    {
+      "keyword": "s",
+      "name": "StartPage",
+      "search_url": "https://www.startpage.com/do/search?q={searchTerms}&cat=web",
+      "suggest_url": "https://www.startpage.com/cgi-bin/csuggest?query={searchTerms}&limit=20&format=json",
+      "encoding": "UTF-8",
+      "image_search_url": "https://www.startpage.com/do/search?q={searchTerms}&cat=images"
+    },
+    {
+      "keyword": "k",
+      "name": "Kagi",
+      "search_url": "https://www.kagi.com/search?q={searchTerms}",
+      "suggest_url": "https://www.kagi.com/search?q={searchTerms}&format=json",
+      "encoding": "UTF-8",
+      "image_search_url": "https://www.kagi.com/search?q={searchTerms}&categories=images"
+    },
+    {
+      "keyword": "b",
+      "name": "Brave",
+      "search_url": "https://search.brave.com/search?q={searchTerms}",
+      "suggest_url": "https://search.brave.com/search?q={searchTerms}&format=json",
+      "encoding": "UTF-8",
+      "image_search_url": "https://search.brave.com/search?q={searchTerms}&categories=images"
+    },
+    {
+      "keyword": "m",
+      "name": "Mojeek",
+      "search_url": "https://www.mojeek.com/search?q={searchTerms}",
+      "suggest_url": "https://www.mojeek.com/search?q={searchTerms}&format=json",
+      "encoding": "UTF-8",
+      "image_search_url": "https://www.mojeek.com/search?q={searchTerms}&categories=images"
+    },
+    {
+      "keyword": "n",
+      "name": "Neeva",
+      "search_url": "https://www.neeva.com/search?q={searchTerms}",
+      "suggest_url": "https://www.neeva.com/search?q={searchTerms}&format=json",
+      "encoding": "UTF-8",
+      "image_search_url": "https://www.neeva.com/search?q={searchTerms}&categories=images"
+    },
+    {
+      "keyword": "sx",
+      "name": "Searx",
+      "search_url": "https://searx.be/?q={searchTerms}",
+      "suggest_url": "https://searx.be/?q={searchTerms}&format=json",
+      "encoding": "UTF-8",
+      "image_search_url": "https://searx.be/?q={searchTerms}&categories=images"
+    },
+    
+    {
+      "keyword": "q",
+      "name": "Qwant",
+      "search_url": "https://www.qwant.com/?q={searchTerms}",
+      "suggest_url": "https://api.qwant.com/api/suggest/?q={searchTerms}&client=opensearch",
+      "encoding": "UTF-8",
+      "image_search_url": "https://www.qwant.com/?q={searchTerms}&t=images"
+    },
+    {
+      "keyword": "y",
+      "name": "You.com",
+      "search_url": "https://www.you.com/search?q={searchTerms}",
+      "suggest_url": "https://www.you.com/search?q={searchTerms}&format=json",
+      "encoding": "UTF-8",
+      "image_search_url": "https://www.you.com/search?q={searchTerms}&categories=images"
+    }
+  ],
+  
+  // DNS
+  "DnsOverHttpsMode": "secure",
+  "BuiltInDnsClientEnabled": true,
+  "EncryptedClientHelloEnabled": true,
+  "DNSInterceptionChecksEnabled": false,
+  "DnsOverHttpsTemplates": "https://dns.quad9.net/dns-query",
+
+  // Security
+  "EnhanceSecurityMode": 2,
+  "SSLErrorOverrideAllowed": true,
+  "SandboxExternalProtocolBlocked": true,
+  "ResolveNavigationErrorsUseWebService": false,
+  "InsecurePrivateNetworkRequestsAllowed": false,
+  "WebRtcLocalhostIpHandling": "disable_non_proxied_udp",
+  // "MAUEnabled": false,
+  // "PDFSecureMode": true,
+  // "SmartScreenEnabled": false,
+  // "TyposquattingChecker": false
+  // "AutomaticHttpsDefaultMode": 2,
+  // "SmartScreenDnsRequestsEnabled": false,
+  // "NewSmartScreenLibraryEnabled": false,
+  // "UpdatePolicyOverride": "manual-only",
+  // "EnhanceSecurityModeBypassIntranet": true,
+
+  // Internet Explorer mode
+  // "HideInternetExplorerRedirectUXForIncompatibleSitesEnabled": false,
+  // "InternetExplorerIntegrationLevel": 0,
+  // "InternetExplorerModeToolbarButtonEnabled": false,
+
+  // Disable features
+  "MAMEnabled": false,
+  "BrowserSignin": 0,
+  "SyncDisabled": true,
+  "AllowSurfGame": false,
+  "AllowGamesMenu": false,
+  "TranslateEnabled": false,
+  "EnableMediaRouter": false, // Disable Cast
+  "ShowCastIconInToolbar": false, // Disable cast icon in the toolbar
+  "EdgeWorkspacesEnabled": false,
+  "SignInCtaOnNtpEnabled": false,
+  "EdgeCollectionsEnabled": false,
+  "EdgeEDropEnabled": false,
+  "EdgeEnhanceImagesEnabled": false,
+  "EdgeFollowEnabled": false,
+  "EdgeShoppingAssistantEnabled": false,
+  "MathSolverEnabled": false,
+  "SharedLinksEnabled": false,
+  "HubsSidebarEnabled": false,
+  "InAppSupportEnabled": false,
+  "ShowMicrosoftRewards": false,
+  "TextPredictionEnabled": false,
+  "SpeechRecognitionEnabled": false,
+  "SiteSafetyServicesEnabled": false,
+  "FamilySafetySettingsEnabled": false,
+  "ConfigureOnlineTextToSpeech": false,
+  "MicrosoftEditorSynonymsEnabled": false,
+  "MicrosoftEditorProofingEnabled": false,
+  "ShowOfficeShortcutInFavoritesBar": false,
+  "ImmersiveReaderGrammarToolsEnabled": false,
+  "ImmersiveReaderPictureDictionaryEnabled": false,
+  "HideFirstRunExperience": true,
+  "PromotionalTabsEnabled": false,
+  "ShowRecommendationsEnabled": false,
+  "RelaunchNotification": 1, // Notify a user that a browser restart is recommended or required for pending updates
+  "MicrosoftEdgeInsiderPromotionEnabled": false,
+  "ShowPDFDefaultRecommendationsEnabled": false, // notifications to set Microsoft Edge as default PDF reader
+  "RelatedMatchesCloudServiceEnabled": false, // receives related matches in Find on Page, which provides spellcheck, synonyms, and Q&A results in Microsoft Edge.
+
+  // "CollectionsServicesAndExportsBlockList": [
+  //   "pinterest_suggestions",
+  //   "send_word",
+  //   "send_excel",
+  //   "send_onenote",
+  //   "send_pinterest"
+  // ]
+
+  // Privacy
+  "TrackingPrevention": 3,
+  "UserFeedbackAllowed": false,
+  "UserAgentReduction": 2,
+  "BingAdsSuppression": true,
+  "AdsTransparencyEnabled": false,
+  "AdsSettingForIntrusiveAdsSites": 2,
+  "AlternateErrorPagesEnabled": false,
+  "PersonalizationReportingEnabled": false,
+  "DefaultShareAdditionalOSRegionSetting": 2,
+  "DefinePreferredLanguages": "en-US",
+  "ComponentUpdatesEnabled": false,
+  "EdgeAssetDeliveryServiceEnabled": false,
+  "NetworkPredictionOptions": 2, // This controls DNS prefetching, TCP and SSL preconnection, and prerendering of web pages.
+  "ExperimentationAndConfigurationServiceControl": 0, // Disable communication with the Experimentation and Configuration Service
+  "LocalProvidersEnabled": true, // Enable local search providers Favorites and Browsing History in the address bar
+
+  // "ClickOnceEnabled": false, // ClickOnce is a Microsoft technology that allows users to download and run applications from the Internet.
+  // "DirectInvokeEnabled": false, // Allow users to open files using the DirectInvoke protocol
+  // "DiagnosticData": 1,
+  // "BrowsingDataLifetime": [
+  //   {
+  //     "data_types": ["browsing_history", "download_history"],
+  //     "time_to_live_in_hours": 72
+  //   },
+  //   {
+  //     "data_types": ["cached_images_and_files"],
+  //     "time_to_live_in_hours": 2
+  //   }
+  // ],
+
+  // Setup
+  "RestoreOnStartup": 1,
+  "ImportShortcuts": false, // Shortcuts aren't imported on first run.
+  "AutoplayAllowed": false,
+  "SleepingTabsEnabled": true,
+  "SleepingTabsTimeout": 1800,
+  "DefaultCookiesSetting": 4,
+  "BlockThirdPartyCookies": true,
+  "PaymentMethodQueryEnabled": false,
+  "DefaultClipboardSetting": 3,
+  "DefaultSensorsSetting": 2,
+  "AskBeforeCloseEnabled": true,
+  "PasswordManagerEnabled": false,
+  "AutofillAddressEnabled": false,
+  "AutofillCreditCardEnabled": false,
+  "DefaultJavaScriptJitSetting": 2,
+  "DefaultAutomaticDownloadsSetting": 2,
+  "AccessibilityImageLabelsEnabled": true,
+  "BrowserNetworkTimeQueriesEnabled": false,
+  "AutoLaunchProtocolsComponentEnabled": false,
+  "ExternalProtocolDialogShowAlwaysOpenCheckbox": true,
+  "HardwareAccelerationModeEnabled": true,
+  "ClearCachedImagesAndFilesOnExit": true,
+  "ClearBrowsingDataOnExit": true
+
+  // "ConfigureShare": 1,
+  // "StartupBoostEnabled": false,
+  // "BackgroundModeEnabled": false, // Continue running background apps after Microsoft Edge closes
+  // "ConfigureFriendlyURLFormat": 3,
+  // "NonRemovableProfileEnabled": false,
+}
